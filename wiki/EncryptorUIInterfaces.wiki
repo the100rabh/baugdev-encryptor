@@ -1,0 +1,16 @@
+#summary Describes interfaces for Encryptor UI to be called
+#labels Phase-Design
+
+== Encryptor UI Interfaces ==
+
+*com.baugdev.encryptor.ui* is the activity to be invoked by others. The intent that needs to be passed to this needs to have the following extras.
+
+  *  Key = "Text" Type = String
+
+  *  Key = "InvocationType" Type = Int (UI Mode == 0, SilentMode == 1)
+
+  *  Key = "ActionType" Type=Int (Encrypt ==0, Decrypt==1)
+
+The output or the encrypted text is recieved via the data in the OnActivityComplete 
+
+  *  Key="OutText" Type= String 
